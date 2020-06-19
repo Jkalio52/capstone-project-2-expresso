@@ -20,4 +20,10 @@ db.serialize(function() {
     '`employee_id` INTEGER NOT NULL, ' +
     'PRIMARY KEY(`id`), ' +
     'FOREIGN KEY(`employee_id`) REFERENCES `Employee`(`id`) )');
+
+
+    db.run('CREATE TABLE IF NOT EXISTS `Menu` ( ' +
+    '`id` INTEGER NOT NULL, ' +
+    '`title` TEXT NOT NULL, ' +
+    'PRIMARY KEY(`id`) )');
 });
